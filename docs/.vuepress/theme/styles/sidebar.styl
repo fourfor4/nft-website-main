@@ -1,0 +1,91 @@
+ul > li > a.sidebar-link {
+	color: $sidebarTextColor;
+	font-weight: 500;
+}
+
+ul.sidebar-links > li > a {
+	color: inherit;
+}
+
+.sidebar {
+	background-color: $layoutBgColor;
+	color: #fff;
+
+	.sidebar-group:not(.collapsable) .sidebar-heading:not(.clickable) {
+		color: $tertiaryColor;
+	}
+
+	.sidebar-heading {
+		font-family: 'VT323', monospace;
+		font-size: 1.6em;
+		text-transform: uppercase;
+		line-height: 1.4;
+		margin-top: 0.25em;
+		letter-spacing: 0.2rem;
+
+		span {
+			border-bottom: 3px solid $tertiaryColor;
+   			box-shadow: 2px 5px 0 -2px $secondaryColor;
+		}
+	}
+
+	.sidebar-group .arrow {
+		display: none;
+	}
+
+	.sidebar-group.is-sub-group a.sidebar-link {
+		margin-bottom: 0.2rem;
+	}
+
+	a.sidebar-link.active {
+		border-left: 4px solid $tertiaryColor;
+		box-shadow:  inset 5px 0 0 -1px $secondaryColor;
+		margin-left: 2px;
+	} 
+
+	.sidebar-group.is-sub-group {
+		margin-bottom: 0.5rem;
+	}
+
+	.sidebar-links.sidebar-group-items li:last-child .sidebar-group.is-sub-group {
+		margin-bottom: 0;
+	}
+
+	.sidebar-group.is-sub-group > .sidebar-heading:not(.clickable) {
+		opacity: 1;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		letter-spacing: 0.05em;
+		line-height: 2em;
+	}
+
+	{scrollbar};
+}
+
+.icon.outbound {
+	padding-left: 0.15rem;
+	color: $linkColor;
+}
+
+// sidebar scrollbar style
+.sidebar::-webkit-scrollbar {
+	width: 8px;
+	position: fixed;
+	right: 0;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+	background: transparent;
+	transition: background-color 2s;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover, .sidebar:hover::-webkit-scrollbar-thumb {
+	background: $borderColor;
+}
+
+@media (max-width: $MQMobile) {
+	.sidebar {
+		width: 80vw;
+	}
+}

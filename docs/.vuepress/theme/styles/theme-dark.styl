@@ -1,0 +1,194 @@
+@media (prefers-color-scheme: dark) {
+    .theme-container {
+    
+        // Content
+        main.page {
+            background-color: $contentBgColorDark;
+	        color: $textColorDark;
+        }
+
+        // Search
+        header.navbar .links .search-box input {
+            color: $textColorDark;
+            background-color: $inputSearchBgColorDark;
+        }
+        
+        header.navbar .links .search-box .suggestions {
+            background-color: $inputSearchBgColorDark;
+
+            .suggestion a {
+                color: $headingColorDark;
+            }
+            .suggestion.focused a {
+                color: $accentColor;
+            }
+            
+        }
+
+        // DocSearch
+        // See https://docsearch.algolia.com/docs/styling/
+        header.navbar .algolia-autocomplete {
+            /* Main dropdown wrapper */
+             .ds-dropdown-menu {
+                background-color: $contentBgColorDark;
+                border-color: lighten($contentBgColorDark, 20%);
+
+                &::before {
+                    background-color: $contentBgColorDark;
+                    border-color: lighten($contentBgColorDark, 20%);
+                }
+            }
+
+            .algolia-docsearch-suggestion {
+                background-color: $contentBgColorDark;
+            }
+
+            /* Main category (eg. Getting Started) */
+            .algolia-docsearch-suggestion--category-header {
+                color: $textColorDark;
+                background-color: $primaryColor;
+                border-color: lighten($contentBgColorDark, 10%);
+            }
+
+            /* Category (eg. Downloads) */
+            .algolia-docsearch-suggestion--subcategory-column {
+                background-color: lighten($contentBgColorDark, 7%) !important;
+                color: $textColorDark;
+
+                &::before {
+                    background: lighten($contentBgColorDark, 10%);
+                }
+            }
+
+            .algolia-docsearch-suggestion--subcategory-column-text {
+                color: $textColorDark;
+            }
+
+            .algolia-docsearch-suggestion--content {
+                background-color: $contentBgColorDark;
+
+                &::before {
+                    background: none;
+                }
+            }
+
+            /* Title (eg. Bootstrap CDN) */
+            .algolia-docsearch-suggestion--title {
+                color: $textColorDark;
+            }
+
+            /* Description description (eg. Bootstrap currently works...) */
+            .algolia-docsearch-suggestion--text {
+                color: $textColorDark;
+            }
+
+            /* Highlighted text */
+            .algolia-docsearch-suggestion--highlight {
+                color: $linkColorDark;
+                box-shadow: inset 0 -2px 0 0 alpha($linkColorDark, 80%);
+            }
+
+            .ds-cursor .algolia-docsearch-suggestion--content {
+                background-color: lighten($contentBgColorDark, 15%) !important;
+            }
+
+            .ds-dataset-1 {
+                background-color: $contentBgColorDark;
+            }
+
+            .ds-suggestion {
+                border-color: lighten($contentBgColorDark, 10%);
+            }
+        }
+
+        // Alert panels
+        .theme-default-content {
+
+            .tip {
+                background-color: darken($accentColor, 75%);
+                .custom-block-title {
+                    color: $textColorDark;
+                }
+                color: $textColorDark;
+            }
+
+            .warning {
+                border-left: 4px solid #e7c000;
+                background-color: darken(#fff7d2, 87%);
+                .custom-block-title {
+                    color: $textColorDark;
+                }
+                color: $textColorDark;
+                a {
+			        color: $linkColorDark;
+		        }
+            }
+
+            .danger {
+                border-left: 4px solid #a93e3e;
+                background-color: darken(#ffe6e6, 90%);
+                .custom-block-title {
+                    color: $textColorDark;
+                }
+                color: $textColorDark;
+                a {
+			        color: $linkColorDark;
+		        }
+            }
+        }
+
+        h1, h2, h3, h4, h5
+        a.header-anchor {
+	        color: $headingColorDark;
+        }
+
+        a {
+            color: $linkColorDark;
+        }
+
+        svg.icon.outbound {
+            color: $linkColorDark;
+        }
+
+        code {
+            color: $textColorDark;
+            background: lighten($contentBgColorDark, 20%);
+        }
+
+        td, tr, th {
+            border-color: lighten($contentBgColorDark, 20%);
+            background: $contentBgColorDark;
+        }
+
+        // Custom
+        .feedback.feedback {
+            background-color: $feedbackBgColorDark;
+            border-color: $feedbackBgColorDark;
+
+            h3 {
+                color: $headingColorDark;
+            }
+        }
+    }
+
+    .btn-primary.btn-primary {
+        background-color: darken($tertiaryColor, 55%);
+        color: $textColorDark;
+
+        &:hover {
+            background-color: darken($secondaryColor, 40%);
+        }
+    }
+
+    .page-edit {
+        .edit-link.edit-link {
+            a {
+                color darken($textColorDark, 70%);
+            }
+        }
+        .last-updated .prefix.prefix {
+            color darken($textColorDark, 70%);
+        }
+    }
+
+}
